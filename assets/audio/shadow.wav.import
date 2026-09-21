@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkt6mrusnjuvf"
-path="res://.godot/imported/shadow.wav-4832d3eda58756c28c6d7a75432be6ac.sample"
+path="res://.godot/imported/shadow.wav-2fb05dd2ef5f83db3a88f19317bbb895.sample"
 
 [deps]
 
 source_file="res://assets/audio/shadow.wav"
-dest_files=["res://.godot/imported/shadow.wav-4832d3eda58756c28c6d7a75432be6ac.sample"]
+dest_files=["res://.godot/imported/shadow.wav-2fb05dd2ef5f83db3a88f19317bbb895.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cokqs64588oae"
-path="res://.godot/imported/vigil.wav-a4accac1bca478e299638a8dbe8cdb8d.sample"
+path="res://.godot/imported/vigil.wav-ff8c54010bad3473cb58a3c3b6cf0c16.sample"
 
 [deps]
 
 source_file="res://assets/audio/vigil.wav"
-dest_files=["res://.godot/imported/vigil.wav-a4accac1bca478e299638a8dbe8cdb8d.sample"]
+dest_files=["res://.godot/imported/vigil.wav-ff8c54010bad3473cb58a3c3b6cf0c16.sample"]
 
 [params]
 

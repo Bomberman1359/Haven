@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d4cj14nrem6dn"
-path="res://.godot/imported/descend.wav-650a3a2a8820b6f770ba7494aab27437.sample"
+path="res://.godot/imported/descend.wav-d6f6c139e020203bbba4494a7475c426.sample"
 
 [deps]
 
 source_file="res://assets/audio/descend.wav"
-dest_files=["res://.godot/imported/descend.wav-650a3a2a8820b6f770ba7494aab27437.sample"]
+dest_files=["res://.godot/imported/descend.wav-d6f6c139e020203bbba4494a7475c426.sample"]
 
 [params]
 

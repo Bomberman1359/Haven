@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8hq0x5jqyxco"
-path="res://.godot/imported/flare.wav-335828887dfb5394cfdc866ec2594592.sample"
+path="res://.godot/imported/flare.wav-ca042124945e0589bfa985e4f53431ff.sample"
 
 [deps]
 
 source_file="res://assets/audio/flare.wav"
-dest_files=["res://.godot/imported/flare.wav-335828887dfb5394cfdc866ec2594592.sample"]
+dest_files=["res://.godot/imported/flare.wav-ca042124945e0589bfa985e4f53431ff.sample"]
 
 [params]
 

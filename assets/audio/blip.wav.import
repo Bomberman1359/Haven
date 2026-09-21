@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://beab1hq22ds1k"
-path="res://.godot/imported/blip.wav-0f62ec56814226c9d8cf58253b03e0eb.sample"
+path="res://.godot/imported/blip.wav-bd2f429f939c5b459d19cecdd550906b.sample"
 
 [deps]
 
 source_file="res://assets/audio/blip.wav"
-dest_files=["res://.godot/imported/blip.wav-0f62ec56814226c9d8cf58253b03e0eb.sample"]
+dest_files=["res://.godot/imported/blip.wav-bd2f429f939c5b459d19cecdd550906b.sample"]
 
 [params]
 

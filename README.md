@@ -149,12 +149,12 @@ there so you know exactly who to blame.
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/main_menu.png" alt="The main menu"></td>
-    <td><img src="docs/screenshots/tutorial.png" alt="The tutorial on depth 1"></td>
+	<td><img src="docs/screenshots/main_menu.png" alt="The main menu"></td>
+	<td><img src="docs/screenshots/tutorial.png" alt="The tutorial on depth 1"></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/new_shadow.png" alt="A brute showing up for the first time"></td>
-    <td><img src="docs/screenshots/beacon_lit.png" alt="A beacon, freshly lit"></td>
+	<td><img src="docs/screenshots/new_shadow.png" alt="A brute showing up for the first time"></td>
+	<td><img src="docs/screenshots/beacon_lit.png" alt="A beacon, freshly lit"></td>
   </tr>
 </table>
 
@@ -163,10 +163,10 @@ there so you know exactly who to blame.
 ```
 src/
   core/      game.gd is the hub: map generation, depth and dread, spawning, FX
-             hud.gd draws every screen and rebuilds its buttons as it draws them,
-               so the keyboard and the mouse always agree on what is where
-             terrain.gd draws the ruin in one pass
-             sfx.gd is an autoload: pooled one-shots plus the looping music
+			 hud.gd draws every screen and rebuilds its buttons as it draws them,
+			   so the keyboard and the mouse always agree on what is where
+			 terrain.gd draws the ruin in one pass
+			 sfx.gd is an autoload: pooled one-shots plus the looping music
   player/    the player, the lantern, and the bolts it fires
   shadows/   all six kinds in one script, driven by a stats table
   world/     beacon.gd owns the vigil; flasks and the stairway live here too
