@@ -1,27 +1,50 @@
+<p align="center">
+  <img src="docs/screenshots/cover.png" alt="Haven, the lantern keeper" width="420">
+</p>
+
+<p align="center">
+  <b>Explore the ruins, light up the beacons, and build your own little haven before the monsters notice your lantern is running on fumes.</b>
+</p>
+
+<p align="center">
+  <a href="https://bomberman1359.itch.io/haven"><img alt="Play on itch.io" src="https://img.shields.io/badge/play-itch.io-fa5c5c?logo=itchdotio&logoColor=white"></a>
+  <img alt="Made with Godot 4.7" src="https://img.shields.io/badge/Godot-4.7-478cbf?logo=godotengine&logoColor=white">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-3da639"></a>
+</p>
+
 # Haven: the lantern keeper
 
-A top-down 2D roguelike built in Godot 4.7. Every sprite and every sound in
-this project is generated from scratch by the scripts in `tools/`. No
-downloaded art and no sample packs, including the ambient music loop.
+A top-down 2D roguelike made in Godot 4.7. You carry the last lantern in a ruin
+that goes down forever, and every shadow down there would like that lantern to
+go out.
 
-![The ruin, with shadows closing in](images/shadows_closing_in.png)
+Every sprite and every sound in this repo comes out of two Python scripts in
+`tools/`. No downloaded art, no sample packs, and yes, the music too.
+
+**[Play it in your browser on itch.io](https://bomberman1359.itch.io/haven).**
+No install, no account.
+
+![A flare going off in a crowd of shadows](docs/screenshots/flare.png)
 
 ## The idea
 
-You carry the only lantern left in a ruin that goes down forever.
+The lantern burns fuel every second, and the size of your light is however much
+fuel you have left. Shadows walk straight through walls, so there is no hiding
+behind a pillar and no corner to cheese. The light is the only thing they
+respect.
 
-The lantern burns fuel every second, and the size of your light is the amount
-of fuel you have left. Shadows walk straight through walls, so there is no
-hiding and no geometry to abuse. The lantern light is the only thing that
-stops them.
-
-Light every beacon on a floor and the way down opens. There is no bottom. Your
-score is how deep you got.
+Light every beacon on a floor and a stairway opens. Take it, pick a boon, and do
+the whole thing again one floor down. There is no bottom. Your score is how deep
+you got before the dark caught up with you.
 
 ## Running it
 
-Open the project folder in Godot 4.7 and press play. There is nothing to
-install and no dependencies beyond the engine.
+The quick way is [itch.io](https://bomberman1359.itch.io/haven), right in the
+browser.
+
+To run it from source, open this folder in Godot 4.7 and press play. There is
+nothing else to install. The repo also ships a Web export preset, so
+Project > Export > Web builds the same browser version that is on itch.
 
 ## Controls
 
@@ -36,7 +59,7 @@ install and no dependencies beyond the engine.
 | T | skip the tutorial |
 | R | run again from the death screen |
 | H | back to the main menu |
-| ESC | menu, or quit from the menu |
+| ESC | menu, or quit from the menu (the browser version skips the quitting part) |
 
 The arrow near the middle of the screen points at the nearest dead beacon. It
 turns blue and points at the stairway once the floor is clear.
@@ -58,27 +81,28 @@ out.
 
 The half-lit brazier lights up as you hold it, so the ground gets safer the
 longer you last. Finishing one refunds a chunk of fuel, scours every shadow
-nearby, and leaves that corner of the map permanently safe.
+nearby, and leaves that corner of the map permanently safe. That corner is your
+haven. Enjoy it, because the stairs are somewhere else.
 
 Each beacon on a floor takes longer than the last, and so does each floor.
 
-![A lit beacon](images/beacon_burning.png)
+![A beacon mid-vigil, with the dark answering](docs/screenshots/vigil.png)
 
 ## What is down there
 
 | | |
 | --- | --- |
-| **Wisp** | The basic thing. Light burns it, flares delete it. |
-| **Husk** | Twice the health, and it walks into the glare instead of backing off. |
-| **Stalker** | Sprints in the dark. Light does not hurt it, but rather pins it in place. |
-| **Leech** | Never touches you. Hangs at the edge of your reach and drinks the lantern. |
-| **Splitter** | Kill it with light and it becomes two wisps. Only a flare kills it clean. |
-| **Brute** | Immune to lantern light. Two flares, or route around it. |
+| **Wisp** | The basic thing. Light burns it, flares delete it. It never shows up alone. |
+| **Husk** | Twice the health, and it walks into the glare instead of backing off. Rude. |
+| **Stalker** | Sprints in the dark and freezes the moment your light touches it. The light never actually hurts it, so do not get comfy. |
+| **Leech** | Never touches you. Hangs at the edge of your reach and drinks the lantern through a very long straw. |
+| **Splitter** | Kill it with light and you get two wisps for the price of one. Only a flare kills it clean. |
+| **Brute** | Immune to lantern light. Two flares, or take the long way around. |
 
 Wisps and husks are there from the first floor. Stalkers show up at depth 2,
 leeches at 3, splitters at 4, brutes at 5.
 
-![The bestiary](images/bestiary.png)
+![The bestiary, four shadows in](docs/screenshots/bestiary.png)
 
 ## Dread and depth
 
@@ -86,11 +110,11 @@ Two separate pressures.
 
 **Dread** is how bad the current floor has got. It climbs with time spent here
 and with every beacon you light, and it drives spawn rate, fuel burn and how
-dark the ruin renders. It resets when you descend.
+dark the ruin renders. It resets when you go down.
 
 **Depth** never resets. Each floor is bigger, holds more beacons, and multiplies
 shadow speed and health. Together they are unbounded, so there is always a floor
-that finally kills you.
+that finally gets you.
 
 ## Boons
 
@@ -102,7 +126,7 @@ revive, faster boots, a burning dash trail, stronger beacons, beacons that
 refuel you further out, fuel drops from banished shadows, or brighter ambient
 light. Six of them can be taken more than once, and they stack across the run.
 
-![Choosing a boon](images/boon_choices.png)
+![Choosing a boon](docs/screenshots/boon_choices.png)
 
 ## The tutorial, the menu, the bestiary
 
@@ -116,23 +140,41 @@ entries show a silhouette. It is saved to `user://haven.cfg` along with your
 deepest run, so it survives between sessions.
 
 Dying opens a stats page with your time, depth, beacons lit, flasks taken,
-boons carried, and a per-kind count of everything you banished.
+boons carried, and a per-kind count of everything you banished. It is mostly
+there so you know exactly who to blame.
 
-![The death stats page](images/death_stats.png)
+![The death stats page](docs/screenshots/death_stats.png)
+
+## More screenshots
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/main_menu.png" alt="The main menu"></td>
+    <td><img src="docs/screenshots/tutorial.png" alt="The tutorial on depth 1"></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/new_shadow.png" alt="A brute showing up for the first time"></td>
+    <td><img src="docs/screenshots/beacon_lit.png" alt="A beacon, freshly lit"></td>
+  </tr>
+</table>
 
 ## How it is put together
 
 ```
-scenes/    main, player, shadow, beacon, flask, stair, bolt
-scripts/   game.gd is the hub: map generation, depth and dread, spawning, FX
-		   shadow.gd holds all six kinds in one script, table-driven
-		   beacon.gd owns the vigil, terrain.gd draws the ruin in one pass
-		   hud.gd draws every screen and rebuilds its buttons as it draws them,
-			 so the keyboard and the mouse always agree on what is where
-		   sfx.gd is an autoload: pooled one-shots plus the looping ambience
-assets/    sprites/ and sfx/, all generated
-images/    screenshots
-tools/     gen_sprites.py, gen_audio.py
+src/
+  core/      game.gd is the hub: map generation, depth and dread, spawning, FX
+             hud.gd draws every screen and rebuilds its buttons as it draws them,
+               so the keyboard and the mouse always agree on what is where
+             terrain.gd draws the ruin in one pass
+             sfx.gd is an autoload: pooled one-shots plus the looping music
+  player/    the player, the lantern, and the bolts it fires
+  shadows/   all six kinds in one script, driven by a stats table
+  world/     beacon.gd owns the vigil; flasks and the stairway live here too
+assets/
+  sprites/   every png, made by tools/gen_sprites.py
+  audio/     every wav, made by tools/gen_audio.py
+docs/        screenshots for this readme
+tools/       the two generator scripts
 ```
 
 A few notes on the implementation:
@@ -159,5 +201,10 @@ python3 tools/gen_sprites.py
 python3 tools/gen_audio.py
 ```
 
-Both write into `assets/`. Godot reimports them on the next focus. Pillow is
-the only dependency, and the audio script uses the standard library alone.
+They write into `assets/sprites/` and `assets/audio/`, and Godot reimports them
+the next time the editor gets focus. Pillow is the only dependency, and the
+audio script uses the standard library alone.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Take it apart and build something weirder with it.

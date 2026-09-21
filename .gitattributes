@@ -1,2 +1,7 @@
-# Normalize EOL for all files that Git considers text files.
+# Normalize line endings for every text file
 * text=auto eol=lf
+
+# Generated art and sound
+*.png binary
+*.wav binary
+*.zip binary

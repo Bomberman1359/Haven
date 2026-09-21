@@ -265,7 +265,7 @@ func damage(amount: int, from: Vector2) -> void:
 	if hp <= 0:
 		if has_revive and not revive_used:
 			revive_used = true
-			hp = mini(max_hp, 3)
+			hp = mini(max_hp, 2)
 			invuln = 2.2
 			fuel = maxf(fuel, 45.0)
 			Sfx.play("ignite", -3.0)
