@@ -1,0 +1,11 @@
+# Godot 4 editor cache and imported assets
+.godot/
+/android/
+
+# Exported builds
+/build/
+/export/
+*.zip
+
+# macOS
+.DS_Store

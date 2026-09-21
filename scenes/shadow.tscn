@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://be4hijr6g2h1w"]
+
+[ext_resource type="Script" uid="uid://b1cp6k0ep1luo" path="res://scripts/shadow.gd" id="1_shadow"]
+[ext_resource type="Texture2D" uid="uid://cnn6ck380j02" path="res://assets/sprites/light.png" id="2_light"]
+[ext_resource type="Texture2D" uid="uid://d1spion4xj33l" path="res://assets/sprites/wisp.png" id="3_body"]
+
+[node name="Shadow" type="Node2D" unique_id=303481991]
+z_index = 4
+script = ExtResource("1_shadow")
+
+[node name="Glow" type="PointLight2D" parent="." unique_id=326105621]
+texture_filter = 2
+color = Color(1, 0.239216, 0.360784, 1)
+energy = 0.6
+texture = ExtResource("2_light")
+texture_scale = 0.22
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1174632326]
+texture = ExtResource("3_body")
+hframes = 4
