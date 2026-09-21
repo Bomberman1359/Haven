@@ -14,7 +14,7 @@ var _music: AudioStreamPlayer
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	for k in KEYS:
-		var path := "res://assets/sfx/%s.wav" % k
+		var path := "res://assets/audio/%s.wav" % k
 		if ResourceLoader.exists(path):
 			_bank[k] = load(path)
 	for i in POOL_SIZE:
@@ -23,7 +23,7 @@ func _ready() -> void:
 		_pool.append(pl)
 	_music = AudioStreamPlayer.new()
 	add_child(_music)
-	var mpath := "res://assets/sfx/music.wav"
+	var mpath := "res://assets/audio/music.wav"
 	if ResourceLoader.exists(mpath):
 		_music.stream = load(mpath)
 		_music.volume_db = -15.0

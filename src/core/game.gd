@@ -20,12 +20,12 @@ const WALL_SHADOWS := true
 const FLARE_DAMAGE := 15.0
 const SAVE_PATH := "user://haven.cfg"
 
-const PlayerScene: PackedScene = preload("res://scenes/player.tscn")
-const ShadowScene: PackedScene = preload("res://scenes/shadow.tscn")
-const BeaconScene: PackedScene = preload("res://scenes/beacon.tscn")
-const FlaskScene: PackedScene = preload("res://scenes/flask.tscn")
-const StairScene: PackedScene = preload("res://scenes/stair.tscn")
-const BoltScene: PackedScene = preload("res://scenes/bolt.tscn")
+const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
+const ShadowScene: PackedScene = preload("res://src/shadows/shadow.tscn")
+const BeaconScene: PackedScene = preload("res://src/world/beacon.tscn")
+const FlaskScene: PackedScene = preload("res://src/world/flask.tscn")
+const StairScene: PackedScene = preload("res://src/world/stair.tscn")
+const BoltScene: PackedScene = preload("res://src/player/bolt.tscn")
 
 const SparkTex: Texture2D = preload("res://assets/sprites/spark.png")
 const FlareTex: Texture2D = preload("res://assets/sprites/flare.png")
@@ -734,7 +734,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.physical_keycode == KEY_ESCAPE:
 			match state:
 				MENU:
-					get_tree().quit()
+					# a browser tab cannot be closed from inside the game
+					if not OS.has_feature("web"):
+						get_tree().quit()
 				BESTIARY, DEAD, PLAY:
 					menu_activate("home")
 
@@ -752,7 +754,8 @@ func menu_activate(id: String) -> void:
 			hud.menu_reset()
 			Sfx.play("blip", -10.0)
 		"quit":
-			get_tree().quit()
+			if not OS.has_feature("web"):
+				get_tree().quit()
 		"back", "home":
 			_go_home()
 		"retry":

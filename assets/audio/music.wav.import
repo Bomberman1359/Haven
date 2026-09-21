@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cutba2qdgs4av"
-path="res://.godot/imported/ignite.wav-b105419e10ad4a28650dee07f103aba9.sample"
+uid="uid://b70qynnjrdltx"
+path="res://.godot/imported/music.wav-c9e8c479201d4fc872e5003587d0f528.sample"
 
 [deps]
 
-source_file="res://assets/sfx/ignite.wav"
-dest_files=["res://.godot/imported/ignite.wav-b105419e10ad4a28650dee07f103aba9.sample"]
+source_file="res://assets/audio/music.wav"
+dest_files=["res://.godot/imported/music.wav-c9e8c479201d4fc872e5003587d0f528.sample"]
 
 [params]
 

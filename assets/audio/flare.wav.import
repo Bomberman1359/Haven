@@ -7,7 +7,7 @@ path="res://.godot/imported/flare.wav-335828887dfb5394cfdc866ec2594592.sample"
 
 [deps]
 
-source_file="res://assets/sfx/flare.wav"
+source_file="res://assets/audio/flare.wav"
 dest_files=["res://.godot/imported/flare.wav-335828887dfb5394cfdc866ec2594592.sample"]
 
 [params]

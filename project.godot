@@ -12,13 +12,13 @@ config_version=5
 
 config/name="Haven"
 config/description="The lantern is the only thing between you and the dark. Relight the five beacons."
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://src/core/main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Sfx="*res://scripts/sfx.gd"
+Sfx="*res://src/core/sfx.gd"
 
 [display]
 

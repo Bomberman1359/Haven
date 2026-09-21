@@ -3,7 +3,7 @@
 import math, random, struct, wave
 
 SR = 22050
-OUT = "assets/sfx/"
+OUT = "assets/audio/"
 rnd = random.Random(11)
 
 

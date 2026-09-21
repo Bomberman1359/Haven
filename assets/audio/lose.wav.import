@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cokqs64588oae"
-path="res://.godot/imported/vigil.wav-a4accac1bca478e299638a8dbe8cdb8d.sample"
+uid="uid://cgb0odhbfb1uw"
+path="res://.godot/imported/lose.wav-ae552ca246677366cfb60028d0e615ff.sample"
 
 [deps]
 
-source_file="res://assets/sfx/vigil.wav"
-dest_files=["res://.godot/imported/vigil.wav-a4accac1bca478e299638a8dbe8cdb8d.sample"]
+source_file="res://assets/audio/lose.wav"
+dest_files=["res://.godot/imported/lose.wav-ae552ca246677366cfb60028d0e615ff.sample"]
 
 [params]
 

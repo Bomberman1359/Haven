@@ -394,7 +394,8 @@ func _draw_menu(vs: Vector2) -> void:
 	_button(Rect2(Vector2(x0, y), Vector2(bw, bh)), "bestiary", "BESTIARY", 14,
 		"%d of %d shadows met" % [game.seen.size(), game.KIND_COUNT])
 	y += bh + 8
-	_button(Rect2(Vector2(x0, y), Vector2(bw, 24)), "quit", "QUIT", 12)
+	if not OS.has_feature("web"):
+		_button(Rect2(Vector2(x0, y), Vector2(bw, 24)), "quit", "QUIT", 12)
 
 	if game.best_depth > 1:
 		_shadowed(Vector2(0, vs.y - 26), "deepest run so far:  depth %d" % game.best_depth,
