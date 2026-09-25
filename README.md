@@ -18,9 +18,6 @@ A top-down 2D roguelike made in Godot 4.7. You carry the last lantern in a ruin
 that goes down forever, and every shadow down there would like that lantern to
 go out.
 
-Every sprite and every sound in this repo comes out of two Python scripts in
-`tools/`. No downloaded art, no sample packs, and yes, the music too.
-
 **[Play it in your browser on itch.io](https://bomberman1359.itch.io/haven).**
 No install, no account.
 
@@ -132,11 +129,11 @@ light. Six of them can be taken more than once, and they stack across the run.
 
 Depth 1 runs an eleven-step tutorial that introduces one control or one HUD bar
 at a time and waits until you actually do the thing before moving on. T skips
-it, and the main menu has a TUTORIAL: ON / OFF toggle that is remembered.
+it, and the main menu has a TUTORIAL: ON / OFF toggle.
 
 The bestiary starts empty. Every shadow you meet for the first time slides in a
 NEW SHADOW card and unlocks its entry: what it is, and how to handle it. Locked
-entries show a silhouette. It is saved to `user://haven.cfg` along with your
+entries show a silhouette. It is saved along with your
 deepest run, so it survives between sessions.
 
 Dying opens a stats page with your time, depth, beacons lit, flasks taken,
@@ -191,8 +188,6 @@ A few notes on the implementation:
 - Every shadow kind lives in one script driven by a stats table, including how
   fast light burns it and how hard light shoves it back. A husk has a low push
   value, which is why it walks into your face.
-- `game.gd` adds itself to the `game` group in `_enter_tree`, so every other
-  script can grab it in its own `_ready` without a hard node path.
 
 ## Regenerating the art
 
